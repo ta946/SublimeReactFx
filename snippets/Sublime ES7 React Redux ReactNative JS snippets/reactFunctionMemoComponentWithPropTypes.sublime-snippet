@@ -1,0 +1,22 @@
+<snippet>
+<content><![CDATA[import React, { memo } from 'react'
+import PropTypes from 'prop-types'
+
+const ${1:${TM_FILENAME/(.+)\..+|.*/$1/:name}} = memo(function ${1:${TM_FILENAME_BASE}}(props) {
+	return (
+		<div>
+			$0
+		</div>
+	)
+})
+
+${1:${TM_FILENAME_BASE}}.propTypes = {
+
+}
+
+export default ${1:${TM_FILENAME_BASE}}
+]]></content>
+<tabTrigger>rmcp</tabTrigger>
+<scope>source.js,source.jsx,source.ts,source.tsx</scope>
+<description>reactFunctionMemoComponentWithPropTypes</description>
+</snippet>
