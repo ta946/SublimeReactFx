@@ -1,4 +1,5 @@
 [
     {"caption": "SublimeReactFX: Rename File", "command": "sublime_react_fx_rename_file"},
     {"caption": "SublimeReactFX: Run Package Json", "command": "sublime_react_fx_run_package_json"},
+    {"caption": "SublimeReactFX: React Drill Props", "command": "sublime_react_fx_react_drill_props"},
 ]

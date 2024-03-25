@@ -3,6 +3,7 @@
 		"caption": "SublimeReactFx", 
 		"children": [
 			{"caption": "Rename File", "command": "show_overlay", "args": {"overlay": "command_palette", "command": "sublime_react_fx_rename_file"} },
+			{"caption": "React Drill Props", "command": "sublime_react_fx_react_drill_props" },
 		]
 	}
 ]
