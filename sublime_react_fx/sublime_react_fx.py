@@ -84,7 +84,7 @@ class ReactFindComponentImports:
 class ReactFileRename:
     def _update_file_import(self, new_file_name, file, matched_import):
         new_text = None
-        with open(file, 'r') as f:
+        with open(file, 'r', encoding='utf-8') as f:
             text = f.read()
         ext_group = matched_import.group(4)
         if not ext_group:

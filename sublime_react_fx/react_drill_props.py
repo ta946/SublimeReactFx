@@ -52,7 +52,7 @@ class SublimeReactFxReactDrillPropsCommand(sublime_plugin.TextCommand):
         return pos
 
     def _drill_props(self, path, props, pos, parents=""):
-        with open(path, 'r') as f:
+        with open(path, 'r', encoding='utf-8') as f:
             text = f.read()
 
         err, props_update_output = ReactFunctionalComponentPropsUpdate().run(text, props, pos)
@@ -75,7 +75,7 @@ class SublimeReactFxReactDrillPropsCommand(sublime_plugin.TextCommand):
             parents = rel_path
 
         new_text = props_update_output['text']
-        with open(path, 'w') as f:
+        with open(path, 'w', encoding='utf-8') as f:
             f.write(new_text)
 
         imports = ReactFindComponentImports().run(package_json_dir, path, rfc_name)
@@ -97,7 +97,7 @@ class SublimeReactFxReactDrillPropsCommand(sublime_plugin.TextCommand):
                 if name != rfc_name:
                     continue
                 alias = import_item.group(2)
-            with open(file, 'r') as f:
+            with open(file, 'r', encoding='utf-8') as f:
                 text = f.read()
             err, new_text, span = ReactCompontentPassProps().run(text, props_to_add, rfc_name, alias)
             if err:
@@ -105,7 +105,7 @@ class SublimeReactFxReactDrillPropsCommand(sublime_plugin.TextCommand):
                 return
 
             self.view.window().open_file(file)
-            with open(file, 'w') as f:
+            with open(file, 'w', encoding='utf-8') as f:
                 f.write(new_text)
 
             matched_import_items = import_dict["import_items"]

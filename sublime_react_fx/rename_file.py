@@ -48,7 +48,7 @@ class SublimeReactFxRenameFileCommand(sublime_plugin.WindowCommand):
         for change_dict in change_list:
             file = change_dict["file"]
             new_text = change_dict["new_text"]
-            with open(file, 'w') as f:
+            with open(file, 'w', encoding='utf-8') as f:
                 f.write(new_text)
             changed.append(file)
         self.window.run_command("rename_file", args={"new_name": file_name})
