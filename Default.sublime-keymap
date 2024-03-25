@@ -1,0 +1,7 @@
+[
+    { "keys": ["alt+f9"], "command": "sublime_react_fx_run_package_json",
+        "context": [
+            { "key": "selector", "operator": "equal", "operand":  "source.js | source.jsx | source.json | source.css | text.html.basic"}
+        ]
+    },
+]
