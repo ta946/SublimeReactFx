@@ -1,8 +1,10 @@
+from .react_drill_props import SublimeReactFxReactDrillPropsCommand
 from .rename_file import SublimeReactFxRenameFileCommand
 from .run_package_json import SublimeReactFxRunPackageJsonCommand
 from .settings import plugin_loaded
 
 __all__ = [
+    'SublimeReactFxReactDrillPropsCommand',
     'SublimeReactFxRenameFileCommand',
     'SublimeReactFxRunPackageJsonCommand',
     'plugin_loaded',

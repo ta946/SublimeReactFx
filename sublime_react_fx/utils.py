@@ -7,7 +7,7 @@ JSX_GLOB = "**/*.jsx"
 ESM_IMPORT_LOCAL_REGEXC = re.compile(
     r'import\s+([\w{},\s*]+)\s+from\s+[\'"](\.{1,2}\/(?:(?:\.{2}|\w+)\/)*(\w+)(\.\w*)?)[\'"]')
 IMPORT_ITEM_REGEXC = re.compile(r'(\w+)(?:\s*as\s*(\w+))?')
-REACT_FUNCTIONAL_COMPONENT_REGEXC = re.compile(r'\b(export\s+(?:default )?function\s+([A-Z]\w*)\(([\w\s,{}]*?)\)\s*{)')
+REACT_FUNCTIONAL_COMPONENT_REGEXC = re.compile(r'\b(export\s+(?:default\s+)?function\s+([A-Z]\w*)\(([\w\s,{}]*?)\)\s*{)')
 
 
 def js_command_is_visible(view):
